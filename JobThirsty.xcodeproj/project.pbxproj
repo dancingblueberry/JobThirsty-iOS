@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABEFEF191C1C15DC00AD9EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */; };
+		ABEFEF1B1C1C15DC00AD9EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */; };
+		ABEFEF1E1C1C15DC00AD9EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */; };
+		ABEFEF201C1C15DC00AD9EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABEFEF1F1C1C15DC00AD9EFF /* Assets.xcassets */; };
+		ABEFEF231C1C15DC00AD9EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEFEF211C1C15DC00AD9EFF /* LaunchScreen.storyboard */; };
+		ABEFEF2E1C1C15DC00AD9EFF /* JobThirstyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF2D1C1C15DC00AD9EFF /* JobThirstyTests.swift */; };
+		ABEFEF391C1C15DC00AD9EFF /* JobThirstyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF381C1C15DC00AD9EFF /* JobThirstyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABEFEF2A1C1C15DC00AD9EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABEFEF0D1C1C15DC00AD9EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABEFEF141C1C15DC00AD9EFF;
+			remoteInfo = JobThirsty;
+		};
+		ABEFEF351C1C15DC00AD9EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABEFEF0D1C1C15DC00AD9EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABEFEF141C1C15DC00AD9EFF;
+			remoteInfo = JobThirsty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABEFEF151C1C15DC00AD9EFF /* JobThirsty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobThirsty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABEFEF1D1C1C15DC00AD9EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABEFEF1F1C1C15DC00AD9EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABEFEF221C1C15DC00AD9EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABEFEF241C1C15DC00AD9EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEFEF291C1C15DC00AD9EFF /* JobThirstyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobThirstyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFEF2D1C1C15DC00AD9EFF /* JobThirstyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobThirstyTests.swift; sourceTree = "<group>"; };
+		ABEFEF2F1C1C15DC00AD9EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEFEF341C1C15DC00AD9EFF /* JobThirstyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobThirstyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEFEF381C1C15DC00AD9EFF /* JobThirstyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobThirstyUITests.swift; sourceTree = "<group>"; };
+		ABEFEF3A1C1C15DC00AD9EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABEFEF121C1C15DC00AD9EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF261C1C15DC00AD9EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF311C1C15DC00AD9EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABEFEF0C1C1C15DC00AD9EFF = {
+			isa = PBXGroup;
+			children = (
+				ABEFEF171C1C15DC00AD9EFF /* JobThirsty */,
+				ABEFEF2C1C1C15DC00AD9EFF /* JobThirstyTests */,
+				ABEFEF371C1C15DC00AD9EFF /* JobThirstyUITests */,
+				ABEFEF161C1C15DC00AD9EFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABEFEF161C1C15DC00AD9EFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFEF151C1C15DC00AD9EFF /* JobThirsty.app */,
+				ABEFEF291C1C15DC00AD9EFF /* JobThirstyTests.xctest */,
+				ABEFEF341C1C15DC00AD9EFF /* JobThirstyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABEFEF171C1C15DC00AD9EFF /* JobThirsty */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */,
+				ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */,
+				ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */,
+				ABEFEF1F1C1C15DC00AD9EFF /* Assets.xcassets */,
+				ABEFEF211C1C15DC00AD9EFF /* LaunchScreen.storyboard */,
+				ABEFEF241C1C15DC00AD9EFF /* Info.plist */,
+			);
+			path = JobThirsty;
+			sourceTree = "<group>";
+		};
+		ABEFEF2C1C1C15DC00AD9EFF /* JobThirstyTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFEF2D1C1C15DC00AD9EFF /* JobThirstyTests.swift */,
+				ABEFEF2F1C1C15DC00AD9EFF /* Info.plist */,
+			);
+			path = JobThirstyTests;
+			sourceTree = "<group>";
+		};
+		ABEFEF371C1C15DC00AD9EFF /* JobThirstyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABEFEF381C1C15DC00AD9EFF /* JobThirstyUITests.swift */,
+				ABEFEF3A1C1C15DC00AD9EFF /* Info.plist */,
+			);
+			path = JobThirstyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABEFEF141C1C15DC00AD9EFF /* JobThirsty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFEF3D1C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirsty" */;
+			buildPhases = (
+				ABEFEF111C1C15DC00AD9EFF /* Sources */,
+				ABEFEF121C1C15DC00AD9EFF /* Frameworks */,
+				ABEFEF131C1C15DC00AD9EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JobThirsty;
+			productName = JobThirsty;
+			productReference = ABEFEF151C1C15DC00AD9EFF /* JobThirsty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABEFEF281C1C15DC00AD9EFF /* JobThirstyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFEF401C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirstyTests" */;
+			buildPhases = (
+				ABEFEF251C1C15DC00AD9EFF /* Sources */,
+				ABEFEF261C1C15DC00AD9EFF /* Frameworks */,
+				ABEFEF271C1C15DC00AD9EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABEFEF2B1C1C15DC00AD9EFF /* PBXTargetDependency */,
+			);
+			name = JobThirstyTests;
+			productName = JobThirstyTests;
+			productReference = ABEFEF291C1C15DC00AD9EFF /* JobThirstyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABEFEF331C1C15DC00AD9EFF /* JobThirstyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABEFEF431C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirstyUITests" */;
+			buildPhases = (
+				ABEFEF301C1C15DC00AD9EFF /* Sources */,
+				ABEFEF311C1C15DC00AD9EFF /* Frameworks */,
+				ABEFEF321C1C15DC00AD9EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABEFEF361C1C15DC00AD9EFF /* PBXTargetDependency */,
+			);
+			name = JobThirstyUITests;
+			productName = JobThirstyUITests;
+			productReference = ABEFEF341C1C15DC00AD9EFF /* JobThirstyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABEFEF0D1C1C15DC00AD9EFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Amanda Berryhill";
+				TargetAttributes = {
+					ABEFEF141C1C15DC00AD9EFF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BFHH72TMX6;
+					};
+					ABEFEF281C1C15DC00AD9EFF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BFHH72TMX6;
+						TestTargetID = ABEFEF141C1C15DC00AD9EFF;
+					};
+					ABEFEF331C1C15DC00AD9EFF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BFHH72TMX6;
+						TestTargetID = ABEFEF141C1C15DC00AD9EFF;
+					};
+				};
+			};
+			buildConfigurationList = ABEFEF101C1C15DC00AD9EFF /* Build configuration list for PBXProject "JobThirsty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABEFEF0C1C1C15DC00AD9EFF;
+			productRefGroup = ABEFEF161C1C15DC00AD9EFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABEFEF141C1C15DC00AD9EFF /* JobThirsty */,
+				ABEFEF281C1C15DC00AD9EFF /* JobThirstyTests */,
+				ABEFEF331C1C15DC00AD9EFF /* JobThirstyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABEFEF131C1C15DC00AD9EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFEF231C1C15DC00AD9EFF /* LaunchScreen.storyboard in Resources */,
+				ABEFEF201C1C15DC00AD9EFF /* Assets.xcassets in Resources */,
+				ABEFEF1E1C1C15DC00AD9EFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF271C1C15DC00AD9EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF321C1C15DC00AD9EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABEFEF111C1C15DC00AD9EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFEF1B1C1C15DC00AD9EFF /* ViewController.swift in Sources */,
+				ABEFEF191C1C15DC00AD9EFF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF251C1C15DC00AD9EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFEF2E1C1C15DC00AD9EFF /* JobThirstyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABEFEF301C1C15DC00AD9EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABEFEF391C1C15DC00AD9EFF /* JobThirstyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABEFEF2B1C1C15DC00AD9EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABEFEF141C1C15DC00AD9EFF /* JobThirsty */;
+			targetProxy = ABEFEF2A1C1C15DC00AD9EFF /* PBXContainerItemProxy */;
+		};
+		ABEFEF361C1C15DC00AD9EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABEFEF141C1C15DC00AD9EFF /* JobThirsty */;
+			targetProxy = ABEFEF351C1C15DC00AD9EFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEFEF1D1C1C15DC00AD9EFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABEFEF211C1C15DC00AD9EFF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABEFEF221C1C15DC00AD9EFF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABEFEF3B1C1C15DC00AD9EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABEFEF3C1C1C15DC00AD9EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABEFEF3E1C1C15DC00AD9EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JobThirsty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirsty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ABEFEF3F1C1C15DC00AD9EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JobThirsty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirsty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ABEFEF411C1C15DC00AD9EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JobThirstyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirstyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobThirsty.app/JobThirsty";
+			};
+			name = Debug;
+		};
+		ABEFEF421C1C15DC00AD9EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JobThirstyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirstyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobThirsty.app/JobThirsty";
+			};
+			name = Release;
+		};
+		ABEFEF441C1C15DC00AD9EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JobThirstyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirstyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JobThirsty;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		ABEFEF451C1C15DC00AD9EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JobThirstyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = berryhill.JobThirstyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JobThirsty;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABEFEF101C1C15DC00AD9EFF /* Build configuration list for PBXProject "JobThirsty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFEF3B1C1C15DC00AD9EFF /* Debug */,
+				ABEFEF3C1C1C15DC00AD9EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABEFEF3D1C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirsty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFEF3E1C1C15DC00AD9EFF /* Debug */,
+				ABEFEF3F1C1C15DC00AD9EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ABEFEF401C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirstyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFEF411C1C15DC00AD9EFF /* Debug */,
+				ABEFEF421C1C15DC00AD9EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ABEFEF431C1C15DC00AD9EFF /* Build configuration list for PBXNativeTarget "JobThirstyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABEFEF441C1C15DC00AD9EFF /* Debug */,
+				ABEFEF451C1C15DC00AD9EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABEFEF0D1C1C15DC00AD9EFF /* Project object */;
+}
