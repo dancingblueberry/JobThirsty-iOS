@@ -30,7 +30,7 @@ class WelcomeViewController : UIViewController, PFLogInViewControllerDelegate, P
             self.presentViewController(logInController, animated:true, completion: nil)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            let vc = storyboard.instantiateViewControllerWithIdentifier("tabBarController") as! UITabBarController
             self.presentViewController(vc, animated: true, completion: nil)
         }
     }
