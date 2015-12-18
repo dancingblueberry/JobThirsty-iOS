@@ -12,8 +12,9 @@ import UIKit
 
 class ConnectionsTableViewController: PFQueryTableViewController {
     
-    @IBOutlet weak var menuButton:UIBarButtonItem!
     var currentUserId:String!
+    
+    @IBOutlet weak var connectionsSegmentedControl: UISegmentedControl!
     
     override func viewDidAppear(animated: Bool) {
 //        if PFUser.currentUser() == nil {
@@ -68,15 +69,23 @@ class ConnectionsTableViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
         
-        let receiverQuery = PFQuery(className: parseClassName!)
-        receiverQuery.whereKey("receiverId", equalTo: currentUserId)
-        receiverQuery.whereKey("handshake", equalTo: true)
+        var query:PFQuery!
         
-        let intenderQuery = PFQuery(className: parseClassName!)
-        intenderQuery.whereKey("intenderId", equalTo: currentUserId)
-        intenderQuery.whereKey("handshake", equalTo: true)
-        
-        let query = PFQuery.orQueryWithSubqueries([receiverQuery, intenderQuery])
+        if (connectionsSegmentedControl.selectedSegmentIndex == 0) {
+            let receiverQuery = PFQuery(className: parseClassName!)
+            receiverQuery.whereKey("receiverId", equalTo: currentUserId)
+            receiverQuery.whereKey("handshake", equalTo: true)
+            
+            let intenderQuery = PFQuery(className: parseClassName!)
+            intenderQuery.whereKey("intenderId", equalTo: currentUserId)
+            intenderQuery.whereKey("handshake", equalTo: true)
+            
+            query = PFQuery.orQueryWithSubqueries([receiverQuery, intenderQuery])
+        } else {
+            query = PFQuery(className: parseClassName!)
+            query.whereKey("receiverId", equalTo: currentUserId)
+            query.whereKey("handshake", equalTo: false)
+        }
         
         return query
     }
@@ -84,7 +93,18 @@ class ConnectionsTableViewController: PFQueryTableViewController {
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell") as! ConnectionsTableViewCell!
+        let cellIdentifier = (connectionsSegmentedControl.selectedSegmentIndex == 0) ? "ConnectionsCell" : "ConnectionsRequestCell"
+        var cell:ConnectionsTableViewCell!
+        
+        cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! ConnectionsTableViewCell!
+        
+//        // if viewing requests
+//        if (connectionsSegmentedControl.selectedSegmentIndex == 0) {
+//            cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell") as! ConnectionsTableViewCell!
+//        } else {
+//            cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell") as! ConnectionsTableViewCell!
+//        }
+        
         
         // Extract values from the PFObject to display in the table cell
         var name = ""
@@ -96,14 +116,20 @@ class ConnectionsTableViewController: PFQueryTableViewController {
             name = (object?["intenderFullName"] as? String)!
             connectionId = (object?["intenderId"] as? String)!
         }
-        cell?.connectionName?.text = name
+        cell.connectionName?.text = name
         
+        getProfileImage(connectionId, cell: cell)
+        
+        return cell
+    }
+    
+    func getProfileImage(userId:String, cell:ConnectionsTableViewCell) {
         
         let initialThumbnail = UIImage(named: "ProfilePlaceholder")
         cell.profileImage.image = initialThumbnail
-
+        
         let connectionQuery = PFUser.query()
-        connectionQuery!.getObjectInBackgroundWithId(connectionId) { (connectionUser, error) -> Void in
+        connectionQuery!.getObjectInBackgroundWithId(userId) { (connectionUser, error) -> Void in
             let dataQuery = PFQuery(className: "EmployeeData")
             dataQuery.getObjectInBackgroundWithId(connectionUser!["dataId"] as! String, block: { (data, error) -> Void in
                 if let thumbnail = data!["profileImage"] as? PFFile {
@@ -111,20 +137,14 @@ class ConnectionsTableViewController: PFQueryTableViewController {
                     cell.profileImage.loadInBackground()
                 }
             })
-            
-            
         }
         
-//        let connectionUser = PFQuery.getUserObjectWithId(connectionId)!
-//        
-//        if let thumbnail = connectionUser?["flag"] as? PFFile {
-//            cell.profileImage.file = thumbnail
-//            cell.profileImage.loadInBackground()
-//        }
-        
-        return cell
     }
     
+    @IBAction func connectionsSegmentedControlValueChanged(sender: AnyObject) {
+        
+        self.loadObjects()
+    }
 }
 
 

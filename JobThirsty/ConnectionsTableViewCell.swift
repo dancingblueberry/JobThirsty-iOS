@@ -14,6 +14,9 @@ class ConnectionsTableViewCell: PFTableViewCell {
     @IBOutlet weak var connectionName: UILabel!
     @IBOutlet weak var profileImage: PFImageView!
     
+    @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var declineButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
