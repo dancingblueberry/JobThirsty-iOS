@@ -118,23 +118,23 @@ class ConnectionsTableViewController: PFQueryTableViewController {
         }
         cell.connectionName?.text = name
         
-        getProfileImage(connectionId, cell: cell)
+        getProfileImage(connectionId, profileImage: cell.profileImage)
         
         return cell
     }
     
-    func getProfileImage(userId:String, cell:ConnectionsTableViewCell) {
+    func getProfileImage(userId:String, profileImage:PFImageView) {
         
         let initialThumbnail = UIImage(named: "ProfilePlaceholder")
-        cell.profileImage.image = initialThumbnail
+        profileImage.image = initialThumbnail
         
-        let connectionQuery = PFUser.query()
-        connectionQuery!.getObjectInBackgroundWithId(userId) { (connectionUser, error) -> Void in
+        let userQuery = PFUser.query()
+        userQuery!.getObjectInBackgroundWithId(userId) { (user, error) -> Void in
             let dataQuery = PFQuery(className: "EmployeeData")
-            dataQuery.getObjectInBackgroundWithId(connectionUser!["dataId"] as! String, block: { (data, error) -> Void in
+            dataQuery.getObjectInBackgroundWithId(user!["dataId"] as! String, block: { (data, error) -> Void in
                 if let thumbnail = data!["profileImage"] as? PFFile {
-                    cell.profileImage.file = thumbnail
-                    cell.profileImage.loadInBackground()
+                    profileImage.file = thumbnail
+                    profileImage.loadInBackground()
                 }
             })
         }

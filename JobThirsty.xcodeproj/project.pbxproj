@@ -27,6 +27,13 @@
 		ABA446501C23E99A00B1A39F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */; };
 		ABA446531C23FA0D00B1A39F /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446521C23FA0D00B1A39F /* ConnectionsTableViewCell.swift */; };
 		ABA446551C23FB0600B1A39F /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446541C23FB0600B1A39F /* ConnectionsTableViewController.swift */; };
+		ABA4465A1C24EA5B00B1A39F /* PositionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446591C24EA5B00B1A39F /* PositionsTableViewController.swift */; };
+		ABA4465C1C24EAFD00B1A39F /* PositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4465B1C24EAFD00B1A39F /* PositionsTableViewCell.swift */; };
+		ABA4465E1C24FA7300B1A39F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */; };
+		ABDB3C5E1C2670A100C1F7F2 /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */; };
+		ABDB3C601C26721F00C1F7F2 /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */; };
+		ABDB3C631C2682A800C1F7F2 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */; };
+		ABDB3C651C2682B500C1F7F2 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C641C2682B500C1F7F2 /* MoreTableViewCell.swift */; };
 		ABEFEF191C1C15DC00AD9EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */; };
 		ABEFEF1B1C1C15DC00AD9EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */; };
 		ABEFEF1E1C1C15DC00AD9EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */; };
@@ -74,6 +81,13 @@
 		ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ABA446521C23FA0D00B1A39F /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
 		ABA446541C23FB0600B1A39F /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
+		ABA446591C24EA5B00B1A39F /* PositionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionsTableViewController.swift; sourceTree = "<group>"; };
+		ABA4465B1C24EAFD00B1A39F /* PositionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionsTableViewCell.swift; sourceTree = "<group>"; };
+		ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
+		ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewCell.swift; sourceTree = "<group>"; };
+		ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		ABDB3C641C2682B500C1F7F2 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		ABEFEF151C1C15DC00AD9EFF /* JobThirsty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobThirsty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -140,9 +154,13 @@
 		ABA4464A1C23C5D600B1A39F /* mainStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				ABDB3C611C26801B00C1F7F2 /* more */,
+				ABDB3C5C1C26705F00C1F7F2 /* newsfeed */,
+				ABA446581C24EA2D00B1A39F /* positions */,
 				ABA446511C23FA0200B1A39F /* connections */,
 				ABEFEF1A1C1C15DC00AD9EFF /* ViewController.swift */,
 				ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */,
+				ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */,
 			);
 			name = mainStoryboard;
 			sourceTree = "<group>";
@@ -156,7 +174,16 @@
 			name = connections;
 			sourceTree = "<group>";
 		};
-		ABEFEF0C1C1C15DC00AD9EFF = {
+		ABA446581C24EA2D00B1A39F /* positions */ = {
+			isa = PBXGroup;
+			children = (
+				ABA446591C24EA5B00B1A39F /* PositionsTableViewController.swift */,
+				ABA4465B1C24EAFD00B1A39F /* PositionsTableViewCell.swift */,
+			);
+			name = positions;
+			sourceTree = "<group>";
+		};
+		ABDB3C571C24FE2300C1F7F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				AB653F461C1FAE3B008C8AB3 /* libsqlite3.tbd */,
@@ -172,6 +199,32 @@
 				AB653F2E1C1FAD81008C8AB3 /* Bolts.framework */,
 				AB653F2F1C1FAD81008C8AB3 /* Parse.framework */,
 				AB653F301C1FAD81008C8AB3 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABDB3C5C1C26705F00C1F7F2 /* newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */,
+				ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */,
+			);
+			name = newsfeed;
+			sourceTree = "<group>";
+		};
+		ABDB3C611C26801B00C1F7F2 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */,
+				ABDB3C641C2682B500C1F7F2 /* MoreTableViewCell.swift */,
+			);
+			name = more;
+			sourceTree = "<group>";
+		};
+		ABEFEF0C1C1C15DC00AD9EFF = {
+			isa = PBXGroup;
+			children = (
+				ABDB3C571C24FE2300C1F7F2 /* Frameworks */,
 				ABEFEF171C1C15DC00AD9EFF /* JobThirsty */,
 				ABEFEF2C1C1C15DC00AD9EFF /* JobThirstyTests */,
 				ABEFEF371C1C15DC00AD9EFF /* JobThirstyUITests */,
@@ -357,13 +410,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDB3C5E1C2670A100C1F7F2 /* NewsfeedTableViewController.swift in Sources */,
+				ABDB3C651C2682B500C1F7F2 /* MoreTableViewCell.swift in Sources */,
 				ABA4464C1C23C92F00B1A39F /* MyLogInViewController.swift in Sources */,
 				ABA446551C23FB0600B1A39F /* ConnectionsTableViewController.swift in Sources */,
+				ABA4465E1C24FA7300B1A39F /* MainTabBarController.swift in Sources */,
 				ABA446491C2377DF00B1A39F /* WelcomeViewController.swift in Sources */,
+				ABDB3C601C26721F00C1F7F2 /* NewsfeedTableViewCell.swift in Sources */,
 				ABEFEF1B1C1C15DC00AD9EFF /* ViewController.swift in Sources */,
 				ABA4464E1C23CB0A00B1A39F /* MySignUpViewController.swift in Sources */,
 				ABEFEF191C1C15DC00AD9EFF /* AppDelegate.swift in Sources */,
+				ABA4465A1C24EA5B00B1A39F /* PositionsTableViewController.swift in Sources */,
+				ABDB3C631C2682A800C1F7F2 /* MoreTableViewController.swift in Sources */,
 				ABA446531C23FA0D00B1A39F /* ConnectionsTableViewCell.swift in Sources */,
+				ABA4465C1C24EAFD00B1A39F /* PositionsTableViewCell.swift in Sources */,
 				ABA446501C23E99A00B1A39F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
