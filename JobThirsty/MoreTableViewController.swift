@@ -40,10 +40,19 @@ class MoreTableViewController: UITableViewController {
         let id = tableContents[row][2]
 
         if (tableContents[row][0] == "Logout") {
-            PFUser.logOut()
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("WelcomeViewController") as! WelcomeViewController
-            self.presentViewController(vc, animated: true, completion: nil)
+            let logoutConfirm = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            logoutConfirm.addAction(UIAlertAction(title: "Logout", style: .Destructive, handler: { (action: UIAlertAction!) in
+                PFUser.logOut()
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                let vc = storyboard.instantiateViewControllerWithIdentifier("WelcomeViewController") as! WelcomeViewController
+                self.presentViewController(vc, animated: true, completion: nil)
+            }))
+            
+            logoutConfirm.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+            }))
+            
+            presentViewController(logoutConfirm, animated: true, completion: nil)
         } else if (!id.isEmpty) {
             let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier(id)
             self.showViewController(vc as! UIViewController, sender: vc)

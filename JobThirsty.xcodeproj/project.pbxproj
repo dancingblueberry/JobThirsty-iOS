@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB5A76E51C4599F900B89F27 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A76E41C4599F900B89F27 /* ProfileViewController.swift */; };
 		AB653F311C1FAD81008C8AB3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F2E1C1FAD81008C8AB3 /* Bolts.framework */; };
 		AB653F321C1FAD81008C8AB3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F2F1C1FAD81008C8AB3 /* Parse.framework */; };
 		AB653F331C1FAD81008C8AB3 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F301C1FAD81008C8AB3 /* ParseUI.framework */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB5A76E41C4599F900B89F27 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AB653F2E1C1FAD81008C8AB3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		AB653F2F1C1FAD81008C8AB3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		AB653F301C1FAD81008C8AB3 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				ABDB3C641C2682B500C1F7F2 /* MoreTableViewCell.swift */,
 				ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */,
 				ABAAC4C81C41D89F00CA20E0 /* LogOutViewController.swift */,
+				AB5A76E41C4599F900B89F27 /* ProfileViewController.swift */,
 			);
 			name = more;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			files = (
 				ABDB3C5E1C2670A100C1F7F2 /* NewsfeedTableViewController.swift in Sources */,
 				ABAAC4D11C43347B00CA20E0 /* PositionTableViewController.swift in Sources */,
+				AB5A76E51C4599F900B89F27 /* ProfileViewController.swift in Sources */,
 				ABDB3C651C2682B500C1F7F2 /* MoreTableViewCell.swift in Sources */,
 				ABA4464C1C23C92F00B1A39F /* MyLogInViewController.swift in Sources */,
 				ABA446551C23FB0600B1A39F /* ConnectionsTableViewController.swift in Sources */,
