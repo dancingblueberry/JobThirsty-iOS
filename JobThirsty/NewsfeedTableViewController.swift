@@ -79,37 +79,14 @@ class NewsfeedTableViewController: PFQueryTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! NewsfeedTableViewCell!
         
         // Extract values from the PFObject to display in the table cell
+        cell.newsfeedObject = object
+        cell.involvedList = object?["involvedList"] as! [String]
         if let name = object?["update"] as? String {
             cell?.updateLabel?.text = name
         }
-        
-        let involvedList = object?["involvedList"] as! [String]
-        if involvedList.count >= 1 {
-            getProfileImage(involvedList[0], profileImage: cell.profileImage1)
-        }
-        if involvedList.count >= 2 {
-            getProfileImage(involvedList[1], profileImage: cell.profileImage2)
-        }
+        cell.collectionViewProfileImages.reloadData()
         
         return cell
-    }
-    
-    func getProfileImage(userId:String, profileImage:PFImageView) {
-        
-        let initialThumbnail = UIImage(named: "ProfilePlaceholder")
-        profileImage.image = initialThumbnail
-        
-        let userQuery = PFUser.query()
-        userQuery!.getObjectInBackgroundWithId(userId) { (user, error) -> Void in
-            let dataQuery = PFQuery(className: "EmployeeData")
-            dataQuery.getObjectInBackgroundWithId(user!["dataId"] as! String, block: { (data, error) -> Void in
-                if let thumbnail = data!["profileImage"] as? PFFile {
-                    profileImage.file = thumbnail
-                    profileImage.loadInBackground()
-                }
-            })
-        }
-        
     }
     
 }

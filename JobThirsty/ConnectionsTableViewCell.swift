@@ -11,6 +11,9 @@ import ParseUI
 
 class ConnectionsTableViewCell: PFTableViewCell {
     
+    var tableView: PFQueryTableViewController!
+    var connectionObject: PFObject!
+    
     @IBOutlet weak var connectionName: UILabel!
     @IBOutlet weak var profileImage: PFImageView!
     
@@ -28,4 +31,35 @@ class ConnectionsTableViewCell: PFTableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    @IBAction func pressButtonConnectionAccept(sender: AnyObject) {
+
+        connectionObject["handshake"] = true
+        connectionObject.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+                print("successfully accepted connection")
+            } else {
+                // There was a problem, check error.description
+                print("<ERROR> error occurred when accepting connection")
+            }
+        }
+        self.tableView.loadObjects()
+    }
+
+    @IBAction func pressButtonConnectionReject(sender: AnyObject) {
+
+        connectionObject.deleteInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+                print("successfully rejected connection")
+            } else {
+                // There was a problem, check error.description
+                print("<ERROR> error occurred when rejecting connection")
+            }
+        }
+        self.tableView.loadObjects()
+    }
 }

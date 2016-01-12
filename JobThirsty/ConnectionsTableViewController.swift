@@ -109,6 +109,10 @@ class ConnectionsTableViewController: PFQueryTableViewController {
         // Extract values from the PFObject to display in the table cell
         var name = ""
         var connectionId = ""
+        
+        cell.tableView = self
+        cell.connectionObject = object
+        
         if (object?["intenderId"] as? String == currentUserId) {
             name = (object?["receiverFullName"] as? String)!
             connectionId = (object?["receiverId"] as? String)!
