@@ -11,33 +11,36 @@ import Parse
 
 class PositionDetailViewController: UIViewController {
     
-    var currentObject : PFObject?
+    var positionObject : PFObject?
+    var fromSegueId: String?
     
     @IBOutlet weak var positionTitleLabel: UILabel!
     @IBOutlet weak var companyTitleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Unwrap the current object object
-        if let object = currentObject {
+        if let object = positionObject {
             
-            if let name = object["positionTitle"] as? String {
-                self.positionTitleLabel?.text = name
+            if let positionTitle = object["positionTitle"] as? String {
+                self.positionTitleLabel?.text = positionTitle
             }
             
-            if let name = object["companyTitle"] as? String {
-                self.companyTitleLabel?.text = name
+            if let companyTitle = object["companyTitle"] as? String {
+                self.companyTitleLabel?.text = companyTitle
             }
             
-            if let name = object["location"] as? String {
-                self.locationLabel?.text = name
+            if let location = object["location"] as? String {
+                self.locationLabel?.text = location
             }
             
-            if let name = object["description"] as? String {
-                self.descriptionTextView?.text = name
+            if let description = object["description"] as? String {
+                self.descriptionTextView?.text = description
+                self.descriptionLabel.text = description
             }
             
             //            if let time = object["time"] as? NSDate {

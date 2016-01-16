@@ -12,7 +12,7 @@ import Parse
 class MoreTableViewController: UITableViewController {
     
     // MARK: - Table view data source
-    let tableContents = [["Profile",  "Profile-25",  ""],
+    let tableContents = [["Profile",  "Profile-25",  "ProfileViewController"],
                          ["Settings", "Settings-25", ""],
                          ["Logout",   "Exit-25",     "LogOutViewController"]]
     
@@ -40,19 +40,24 @@ class MoreTableViewController: UITableViewController {
         let id = tableContents[row][2]
 
         if (tableContents[row][0] == "Logout") {
-            let logoutConfirm = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            logoutConfirm.addAction(UIAlertAction(title: "Logout", style: .Destructive, handler: { (action: UIAlertAction!) in
+            // confirm if user wants to logout
+            let logoutConfirm = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            logoutConfirm.view.tintColor = UIColor(netHex:0x009688)
+            // add logout action
+            let logoutAction = UIAlertAction(title: "Logout", style: .Destructive) { (action) in
                 PFUser.logOut()
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
                 let vc = storyboard.instantiateViewControllerWithIdentifier("WelcomeViewController") as! WelcomeViewController
                 self.presentViewController(vc, animated: true, completion: nil)
-            }))
-            
-            logoutConfirm.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
-            }))
+            }
+            logoutConfirm.addAction(logoutAction)
+            // add cancel action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in
+            })
+            logoutConfirm.addAction(cancelAction)
             
             presentViewController(logoutConfirm, animated: true, completion: nil)
+            
         } else if (!id.isEmpty) {
             let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier(id)
             self.showViewController(vc as! UIViewController, sender: vc)

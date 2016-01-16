@@ -17,6 +17,7 @@ class PositionTableViewCell: PFTableViewCell {
     @IBOutlet weak var positionTitleLabel: UILabel!
     @IBOutlet weak var companyTitleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var imageButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,11 +36,15 @@ class PositionTableViewCell: PFTableViewCell {
             let appliedWorkers = PFObject(className:"AppliedWorkers")
             appliedWorkers["positionId"] = positionObject.objectId
             appliedWorkers["bossId"] = positionObject["bossId"]
+            // android app still uses "position" column
             appliedWorkers["position"] = positionObject["positionTitle"]
+            appliedWorkers["positionTitle"] = positionObject["positionTitle"]
+            appliedWorkers["companyTitle"] = positionObject["companyTitle"]
             appliedWorkers["name"] = (currentUser!["firstName"] as! String) + " " + (currentUser!["lastName"] as! String)
             appliedWorkers["location"] = positionObject["location"]
             appliedWorkers["applicantId"] = currentUser?.objectId
             appliedWorkers["rejected"] = false
+            appliedWorkers["responded"] = false
             appliedWorkers.saveInBackgroundWithBlock {
                 (success: Bool, error: NSError?) -> Void in
                 if (success) {

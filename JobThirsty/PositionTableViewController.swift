@@ -15,13 +15,9 @@ class PositionTableViewController: PFQueryTableViewController {
     
     @IBOutlet weak var positionsSegmentedControl: UISegmentedControl!
     
-    @IBOutlet weak var editBarButton: UIBarButtonItem!
-    @IBOutlet weak var addBarButton: UIBarButtonItem!
-    
     override func viewWillAppear(animated: Bool) {
         
     }
-    
     
     override func viewDidAppear(animated: Bool) {
         //        if PFUser.currentUser() == nil {
@@ -48,13 +44,20 @@ class PositionTableViewController: PFQueryTableViewController {
         // Get the new view controller using [segue destinationViewController].
         if (segue.identifier == "BrowseToDetail" || segue.identifier == "AppliedToDetail") {
             
-            let detailScene = segue.destinationViewController as! PositionDetailTableViewController
+            let detailScene = segue.destinationViewController as! PositionDetailViewController
             
             // Pass the selected object to the destination view controller.
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let row = Int(indexPath.row)
-                detailScene.positionObject = (objects![row] )
+                detailScene.positionObject = objects![row]
                 detailScene.fromSegueId = segue.identifier
+            }
+        } else if (segue.identifier == "PostedToApplicants") {
+            let postedScene = segue.destinationViewController as! ApplicantsTableViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let row = Int(indexPath.row)
+                postedScene.positionObject = objects![row]
             }
         }
     }
@@ -84,7 +87,7 @@ class PositionTableViewController: PFQueryTableViewController {
         
         // browsing (positions i haven't applied for)
         if (positionsSegmentedControl.selectedSegmentIndex == 0) {
-            query = PFQuery(className: parseClassName!)
+            query = PFQuery(className: "Position")
             query.whereKey("appliedArray", notEqualTo: currentUserId)
         }
         // viewing applied (positions i've applied for)
@@ -94,7 +97,7 @@ class PositionTableViewController: PFQueryTableViewController {
         }
         // viewing posted (positions i've posted)
         else {
-            query = PFQuery(className: parseClassName!)
+            query = PFQuery(className: "Position")
             query.whereKey("bossId", equalTo: currentUserId)
         }
         
@@ -119,33 +122,25 @@ class PositionTableViewController: PFQueryTableViewController {
         cell.positionObject = object
         cell.positionsSegmentedControl = self.positionsSegmentedControl
         
-        if (positionsSegmentedControl.selectedSegmentIndex == 0 ||
-            positionsSegmentedControl.selectedSegmentIndex == 2) {
-                
-                if let name = object?["positionTitle"] as? String {
-                    cell?.positionTitleLabel?.text = name
-                }
-                
-                if let companyTitle = object?["companyTitle"] as? String {
-                    cell?.companyTitleLabel?.text = companyTitle
-                }
-                
-                if let location = object?["location"] as? String {
-                    cell?.locationLabel?.text = location
-                }
-        } else {
-            
-            if let name = object?["position"] as? String {
-                cell?.positionTitleLabel?.text = name
+        
+        let positionTitle = object!["positionTitle"] as! String
+        let companyTitle = object!["companyTitle"] as! String
+        let location = object!["location"] as! String
+        
+        cell.positionTitleLabel.text = positionTitle
+        cell.companyTitleLabel.text = companyTitle
+        cell.locationLabel.text = location
+        
+        // applied positions
+        if (positionsSegmentedControl.selectedSegmentIndex == 1) {
+            if (!(object!["responded"] as! Bool)) {
+                cell.imageButton.imageView?.image = UIImage(named: "Question-Teal-50")
+            } else if (object!["rejected"] as! Bool) {
+                cell.imageButton.imageView?.image = UIImage(named: "Sad-Teal-50")
+            } else {
+                cell.imageButton.imageView?.image = UIImage(named: "Happy-Teal-50")
             }
-            
-            //            if let companyTitle = object?["companyTitle"] as? String {
-            //                cell?.companyTitleLabel?.text = companyTitle
-            //            }
-            
-            if let location = object?["location"] as? String {
-                cell?.locationLabel?.text = location
-            }
+//            cell.imageButton
         }
         
         return cell
@@ -157,14 +152,6 @@ class PositionTableViewController: PFQueryTableViewController {
     }
     
     @IBAction func cancelToPositionsViewController(segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func pressButtonPositionAdd(sender: AnyObject) {
-        
-//        let selectedRow = tableView.indexPathForSelectedRow
-//        self.editing = true
-//        self.objects?.removeAtIndex(selectedRow)
-//        tableView.deleteRowsAtIndexPaths([selectedRow!], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
     @IBAction func postNewPosition(segue:UIStoryboardSegue) {

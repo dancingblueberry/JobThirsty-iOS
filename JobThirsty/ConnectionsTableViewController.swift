@@ -15,37 +15,22 @@ class ConnectionsTableViewController: PFQueryTableViewController {
     var currentUserId:String!
     
     @IBOutlet weak var connectionsSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableHeaderView: UIView!
     
     override func viewDidAppear(animated: Bool) {
-//        if PFUser.currentUser() == nil {
-//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("SignUpInViewController") as! LoginViewController
-//            self.presentViewController(vc, animated: true, completion: nil)
-//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-//        if self.revealViewController() != nil {
-//            menuButton.target = self.revealViewController()
-//            menuButton.action = "revealToggle:"
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//        }
+        self.tableView.tableHeaderView = self.tableHeaderView
+//        self.tableView.contentOffset = CGPointMake(0, self.searchDisplayController.searchBar.frame.size.height);
+        self.tableView.contentOffset = CGPointMake(0, self.tableHeaderView.frame.size.height)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        // Get the new view controller using [segue destinationViewController].
-//        let detailScene = segue.destinationViewController as! AlarmsDetailViewController
-        
-//        // Pass the selected object to the destination view controller.
-//        if let indexPath = self.tableView.indexPathForSelectedRow {
-//            let row = Int(indexPath.row)
-//            detailScene.currentObject = (objects?[row] as! PFObject)
-//        }
     }
     
     // Initialise the PFQueryTable tableview
@@ -97,14 +82,6 @@ class ConnectionsTableViewController: PFQueryTableViewController {
         var cell:ConnectionsTableViewCell!
         
         cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! ConnectionsTableViewCell!
-        
-//        // if viewing requests
-//        if (connectionsSegmentedControl.selectedSegmentIndex == 0) {
-//            cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell") as! ConnectionsTableViewCell!
-//        } else {
-//            cell = tableView.dequeueReusableCellWithIdentifier("ConnectionsCell") as! ConnectionsTableViewCell!
-//        }
-        
         
         // Extract values from the PFObject to display in the table cell
         var name = ""

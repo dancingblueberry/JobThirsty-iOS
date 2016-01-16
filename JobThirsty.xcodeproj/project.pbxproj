@@ -21,21 +21,22 @@
 		AB653F431C1FAE20008C8AB3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F421C1FAE20008C8AB3 /* SystemConfiguration.framework */; };
 		AB653F451C1FAE2B008C8AB3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F441C1FAE2B008C8AB3 /* libz.tbd */; };
 		AB653F471C1FAE3B008C8AB3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB653F461C1FAE3B008C8AB3 /* libsqlite3.tbd */; };
+		AB7D289D1C4736A60024D578 /* PostedPositionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D289C1C4736A60024D578 /* PostedPositionTableViewController.swift */; };
+		AB7D289F1C473D880024D578 /* PostedPositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D289E1C473D880024D578 /* PostedPositionTableViewCell.swift */; };
+		AB7D28DB1C4876DC0024D578 /* ApplicantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D28DA1C4876DB0024D578 /* ApplicantsTableViewCell.swift */; };
+		AB7D28DD1C4876EA0024D578 /* ApplicantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D28DC1C4876EA0024D578 /* ApplicantsTableViewController.swift */; };
 		ABA446471C23777E00B1A39F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA446461C23777E00B1A39F /* Login.storyboard */; };
 		ABA446491C2377DF00B1A39F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446481C2377DF00B1A39F /* WelcomeViewController.swift */; };
 		ABA4464C1C23C92F00B1A39F /* MyLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4464B1C23C92F00B1A39F /* MyLogInViewController.swift */; };
 		ABA4464E1C23CB0A00B1A39F /* MySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4464D1C23CB0A00B1A39F /* MySignUpViewController.swift */; };
-		ABA446501C23E99A00B1A39F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */; };
 		ABA446531C23FA0D00B1A39F /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446521C23FA0D00B1A39F /* ConnectionsTableViewCell.swift */; };
 		ABA446551C23FB0600B1A39F /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA446541C23FB0600B1A39F /* ConnectionsTableViewController.swift */; };
 		ABA4465E1C24FA7300B1A39F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */; };
 		ABAAC4C91C41D89F00CA20E0 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4C81C41D89F00CA20E0 /* LogOutViewController.swift */; };
-		ABAAC4CD1C4332DA00CA20E0 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4CC1C4332DA00CA20E0 /* Position.swift */; };
 		ABAAC4CF1C43330200CA20E0 /* PositionEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4CE1C43330200CA20E0 /* PositionEditTableViewController.swift */; };
 		ABAAC4D11C43347B00CA20E0 /* PositionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4D01C43347B00CA20E0 /* PositionTableViewController.swift */; };
 		ABAAC4D31C4334E400CA20E0 /* PositionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4D21C4334E400CA20E0 /* PositionDetailViewController.swift */; };
 		ABAAC4D51C43351600CA20E0 /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAC4D41C43351600CA20E0 /* PositionTableViewCell.swift */; };
-		ABC562A11C44F91A00566D88 /* PositionDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC562A01C44F91A00566D88 /* PositionDetailTableViewController.swift */; };
 		ABDB3C5E1C2670A100C1F7F2 /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */; };
 		ABDB3C601C26721F00C1F7F2 /* NewsfeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */; };
 		ABDB3C631C2682A800C1F7F2 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */; };
@@ -80,21 +81,22 @@
 		AB653F421C1FAE20008C8AB3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB653F441C1FAE2B008C8AB3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AB653F461C1FAE3B008C8AB3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AB7D289C1C4736A60024D578 /* PostedPositionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedPositionTableViewController.swift; sourceTree = "<group>"; };
+		AB7D289E1C473D880024D578 /* PostedPositionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostedPositionTableViewCell.swift; sourceTree = "<group>"; };
+		AB7D28DA1C4876DB0024D578 /* ApplicantsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicantsTableViewCell.swift; sourceTree = "<group>"; };
+		AB7D28DC1C4876EA0024D578 /* ApplicantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicantsTableViewController.swift; sourceTree = "<group>"; };
 		ABA446461C23777E00B1A39F /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		ABA446481C2377DF00B1A39F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		ABA4464B1C23C92F00B1A39F /* MyLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLogInViewController.swift; sourceTree = "<group>"; };
 		ABA4464D1C23CB0A00B1A39F /* MySignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySignUpViewController.swift; sourceTree = "<group>"; };
-		ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ABA446521C23FA0D00B1A39F /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
 		ABA446541C23FB0600B1A39F /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ABAAC4C81C41D89F00CA20E0 /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
-		ABAAC4CC1C4332DA00CA20E0 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		ABAAC4CE1C43330200CA20E0 /* PositionEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionEditTableViewController.swift; sourceTree = "<group>"; };
 		ABAAC4D01C43347B00CA20E0 /* PositionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionTableViewController.swift; sourceTree = "<group>"; };
 		ABAAC4D21C4334E400CA20E0 /* PositionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionDetailViewController.swift; sourceTree = "<group>"; };
 		ABAAC4D41C43351600CA20E0 /* PositionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
-		ABC562A01C44F91A00566D88 /* PositionDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionDetailTableViewController.swift; sourceTree = "<group>"; };
 		ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
 		ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewCell.swift; sourceTree = "<group>"; };
 		ABDB3C621C2682A800C1F7F2 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -151,49 +153,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB653F4A1C1FDCEE008C8AB3 /* loginSignupStoryboard */ = {
+		AB653F4A1C1FDCEE008C8AB3 /* LoginSignupStoryboard */ = {
 			isa = PBXGroup;
 			children = (
 				ABA446481C2377DF00B1A39F /* WelcomeViewController.swift */,
 				ABA4464B1C23C92F00B1A39F /* MyLogInViewController.swift */,
 				ABA4464D1C23CB0A00B1A39F /* MySignUpViewController.swift */,
 			);
-			name = loginSignupStoryboard;
+			name = LoginSignupStoryboard;
 			sourceTree = "<group>";
 		};
-		ABA4464A1C23C5D600B1A39F /* mainStoryboard */ = {
+		AB7D289A1C472A1B0024D578 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB3C611C26801B00C1F7F2 /* more */,
-				ABDB3C5C1C26705F00C1F7F2 /* newsfeed */,
-				ABA446581C24EA2D00B1A39F /* position */,
-				ABA446511C23FA0200B1A39F /* connections */,
-				ABA4464F1C23E99A00B1A39F /* SettingsViewController.swift */,
-				ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */,
+				ABA446461C23777E00B1A39F /* Login.storyboard */,
+				ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */,
 			);
-			name = mainStoryboard;
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		ABA446511C23FA0200B1A39F /* connections */ = {
+		AB7D289B1C47363A0024D578 /* Applicants */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D289E1C473D880024D578 /* PostedPositionTableViewCell.swift */,
+				AB7D289C1C4736A60024D578 /* PostedPositionTableViewController.swift */,
+				AB7D28DA1C4876DB0024D578 /* ApplicantsTableViewCell.swift */,
+				AB7D28DC1C4876EA0024D578 /* ApplicantsTableViewController.swift */,
+			);
+			name = Applicants;
+			sourceTree = "<group>";
+		};
+		ABA4464A1C23C5D600B1A39F /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4465D1C24FA7300B1A39F /* MainTabBarController.swift */,
+				ABDB3C611C26801B00C1F7F2 /* More */,
+				ABDB3C5C1C26705F00C1F7F2 /* Newsfeed */,
+				ABA446581C24EA2D00B1A39F /* Position */,
+				ABA446511C23FA0200B1A39F /* Connections */,
+			);
+			name = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		ABA446511C23FA0200B1A39F /* Connections */ = {
 			isa = PBXGroup;
 			children = (
 				ABA446521C23FA0D00B1A39F /* ConnectionsTableViewCell.swift */,
 				ABA446541C23FB0600B1A39F /* ConnectionsTableViewController.swift */,
 			);
-			name = connections;
+			name = Connections;
 			sourceTree = "<group>";
 		};
-		ABA446581C24EA2D00B1A39F /* position */ = {
+		ABA446581C24EA2D00B1A39F /* Position */ = {
 			isa = PBXGroup;
 			children = (
+				AB7D289B1C47363A0024D578 /* Applicants */,
 				ABAAC4D41C43351600CA20E0 /* PositionTableViewCell.swift */,
 				ABAAC4D01C43347B00CA20E0 /* PositionTableViewController.swift */,
-				ABC562A01C44F91A00566D88 /* PositionDetailTableViewController.swift */,
 				ABAAC4D21C4334E400CA20E0 /* PositionDetailViewController.swift */,
 				ABAAC4CE1C43330200CA20E0 /* PositionEditTableViewController.swift */,
-				ABAAC4CC1C4332DA00CA20E0 /* Position.swift */,
 			);
-			name = position;
+			name = Position;
 			sourceTree = "<group>";
 		};
 		ABDB3C571C24FE2300C1F7F2 /* Frameworks */ = {
@@ -216,16 +236,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ABDB3C5C1C26705F00C1F7F2 /* newsfeed */ = {
+		ABDB3C5C1C26705F00C1F7F2 /* Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
 				ABDB3C5F1C26721F00C1F7F2 /* NewsfeedTableViewCell.swift */,
 				ABDB3C5D1C2670A100C1F7F2 /* NewsfeedTableViewController.swift */,
 			);
-			name = newsfeed;
+			name = Newsfeed;
 			sourceTree = "<group>";
 		};
-		ABDB3C611C26801B00C1F7F2 /* more */ = {
+		ABDB3C611C26801B00C1F7F2 /* More */ = {
 			isa = PBXGroup;
 			children = (
 				ABDB3C641C2682B500C1F7F2 /* MoreTableViewCell.swift */,
@@ -233,7 +253,7 @@
 				ABAAC4C81C41D89F00CA20E0 /* LogOutViewController.swift */,
 				AB5A76E41C4599F900B89F27 /* ProfileViewController.swift */,
 			);
-			name = more;
+			name = More;
 			sourceTree = "<group>";
 		};
 		ABEFEF0C1C1C15DC00AD9EFF = {
@@ -261,10 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				ABEFEF181C1C15DC00AD9EFF /* AppDelegate.swift */,
-				ABA446461C23777E00B1A39F /* Login.storyboard */,
-				AB653F4A1C1FDCEE008C8AB3 /* loginSignupStoryboard */,
-				ABEFEF1C1C1C15DC00AD9EFF /* Main.storyboard */,
-				ABA4464A1C23C5D600B1A39F /* mainStoryboard */,
+				AB7D289A1C472A1B0024D578 /* Storyboards */,
+				AB653F4A1C1FDCEE008C8AB3 /* LoginSignupStoryboard */,
+				ABA4464A1C23C5D600B1A39F /* MainStoryboard */,
 				ABEFEF1F1C1C15DC00AD9EFF /* Assets.xcassets */,
 				ABEFEF211C1C15DC00AD9EFF /* LaunchScreen.storyboard */,
 				ABEFEF241C1C15DC00AD9EFF /* Info.plist */,
@@ -427,24 +446,25 @@
 			files = (
 				ABDB3C5E1C2670A100C1F7F2 /* NewsfeedTableViewController.swift in Sources */,
 				ABAAC4D11C43347B00CA20E0 /* PositionTableViewController.swift in Sources */,
+				AB7D28DB1C4876DC0024D578 /* ApplicantsTableViewCell.swift in Sources */,
 				AB5A76E51C4599F900B89F27 /* ProfileViewController.swift in Sources */,
 				ABDB3C651C2682B500C1F7F2 /* MoreTableViewCell.swift in Sources */,
+				AB7D289F1C473D880024D578 /* PostedPositionTableViewCell.swift in Sources */,
 				ABA4464C1C23C92F00B1A39F /* MyLogInViewController.swift in Sources */,
+				AB7D289D1C4736A60024D578 /* PostedPositionTableViewController.swift in Sources */,
 				ABA446551C23FB0600B1A39F /* ConnectionsTableViewController.swift in Sources */,
 				ABA4465E1C24FA7300B1A39F /* MainTabBarController.swift in Sources */,
 				ABA446491C2377DF00B1A39F /* WelcomeViewController.swift in Sources */,
 				ABDB3C601C26721F00C1F7F2 /* NewsfeedTableViewCell.swift in Sources */,
 				ABAAC4C91C41D89F00CA20E0 /* LogOutViewController.swift in Sources */,
-				ABAAC4CD1C4332DA00CA20E0 /* Position.swift in Sources */,
+				AB7D28DD1C4876EA0024D578 /* ApplicantsTableViewController.swift in Sources */,
 				ABAAC4D31C4334E400CA20E0 /* PositionDetailViewController.swift in Sources */,
 				ABA4464E1C23CB0A00B1A39F /* MySignUpViewController.swift in Sources */,
-				ABC562A11C44F91A00566D88 /* PositionDetailTableViewController.swift in Sources */,
 				ABEFEF191C1C15DC00AD9EFF /* AppDelegate.swift in Sources */,
 				ABDB3C631C2682A800C1F7F2 /* MoreTableViewController.swift in Sources */,
 				ABAAC4CF1C43330200CA20E0 /* PositionEditTableViewController.swift in Sources */,
 				ABA446531C23FA0D00B1A39F /* ConnectionsTableViewCell.swift in Sources */,
 				ABAAC4D51C43351600CA20E0 /* PositionTableViewCell.swift in Sources */,
-				ABA446501C23E99A00B1A39F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

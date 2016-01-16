@@ -30,6 +30,9 @@ class NewsfeedTableViewController: PFQueryTableViewController {
         //            menuButton.action = "revealToggle:"
         //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         //        }
+        
+        tableView.estimatedRowHeight = 130.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -84,6 +87,7 @@ class NewsfeedTableViewController: PFQueryTableViewController {
         if let name = object?["update"] as? String {
             cell?.updateLabel?.text = name
         }
+        
         cell.collectionViewProfileImages.reloadData()
         
         return cell
